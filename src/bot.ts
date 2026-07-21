@@ -6,8 +6,25 @@ import type { StorageAdapter } from "grammy";
 // bot grows. Durable domain data must NOT live here — use the toolkit's
 // persistent storage (see AGENTS.md).
 export interface Session {
-  // example: step?: "awaiting_amount";
+  /** Current step in a multi-step flow (withdrawal wizard, etc.) */
+  step?: Step;
+  /** Temporary data for the current flow */
+  flowData?: {
+    withdrawalAmount?: number;
+    withdrawalMethod?: string;
+    withdrawalAccount?: string;
+  };
+  /** Timestamp for flow timeout (unix ms) */
+  expiresAt?: number;
 }
+
+export type Step =
+  | "idle"
+  | "awaiting_search"
+  | "awaiting_withdrawal_amount"
+  | "awaiting_withdrawal_method"
+  | "awaiting_withdrawal_account"
+  | "confirming_withdrawal";
 
 export type Ctx = BotContext<Session>;
 

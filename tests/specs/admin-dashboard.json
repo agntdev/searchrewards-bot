@@ -5,9 +5,12 @@
       {
         "expect": [
           {
+            "method": "answerCallbackQuery"
+          },
+          {
             "method": "sendMessage",
             "payload": {
-              "text": "Access user/referral/withdrawal management"
+              "text": "⛔ Access denied. This feature is only available to admins."
             }
           }
         ],

@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Execute search query and log activity"
+              "text": "🔍 What would you like to search for?\n\nType your query after the command, or tap the Search button and type your query."
             }
           }
         ],
