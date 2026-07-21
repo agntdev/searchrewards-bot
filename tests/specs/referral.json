@@ -7,7 +7,7 @@
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Display referral metrics and sharing options"
+              "text": "👋 Please tap /start first to register."
             }
           }
         ],

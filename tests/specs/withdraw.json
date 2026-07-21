@@ -3,17 +3,15 @@
     "name": "/withdraw",
     "steps": [
       {
+        "send": { "text": "/withdraw" },
         "expect": [
           {
             "method": "sendMessage",
             "payload": {
-              "text": "Initiate withdrawal request workflow"
+              "text": "💸 Withdrawal\n\nYour balance: $0.00\nMinimum withdrawal: $1.00\n\nYou don't have enough to withdraw yet. Keep searching to earn more!"
             }
           }
-        ],
-        "send": {
-          "text": "/withdraw"
-        }
+        ]
       }
     ]
   }
